@@ -1,9 +1,9 @@
 import { useFormik } from "formik";
 import * as yup from "yup";
-import React from "react";
 import { TextInput, View, StyleSheet, Pressable } from "react-native";
 import Text from "./Text";
 import theme from "../theme";
+import useSignIn from "../hooks/useSignIn";
 
 const styles = StyleSheet.create({
   container: { flex: true, gap: 8, padding: 8 },
@@ -42,10 +42,12 @@ const onSubmit = (values) => {
 };
 
 const SignIn = () => {
+  const [signIn] = useSignIn();
+
   const formik = useFormik({
     initialValues,
     validationSchema,
-    onSubmit,
+    onSubmit: signIn,
   });
 
   return (

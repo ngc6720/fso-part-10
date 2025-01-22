@@ -7,6 +7,7 @@ export default [
   js.configs.recommended,
   react.configs.flat.recommended,
   {
+    ignorePatterns: [".config/*"],
     plugins: { react, reactNative },
     settings: {
       react: {

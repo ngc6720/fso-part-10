@@ -1,7 +1,7 @@
 import { View, StyleSheet, Image } from "react-native";
-import Text from "./Text";
-import { formatCounts } from "../utils/formatCounts";
-import theme from "../theme";
+import Text from "../Text";
+import { formatCounts } from "../../utils/formatCounts";
+import theme from "../../theme";
 
 const Count = ({ title, content, style, ...props }) => (
   <View style={{ flex: true, alignItems: "center", gap: 4 }}>
